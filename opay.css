@@ -89,6 +89,7 @@ nav{
   background-color: rgb(255, 57, 57);
   border-radius: 50px;
   text-wrap: nowrap;
+  -webkit-text-wrap: nowrap;
   min-width:14px;
   padding: 3px;
   font-size: 10px;
