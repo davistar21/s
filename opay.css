@@ -88,9 +88,8 @@ nav{
   color: white;
   background-color: rgb(255, 57, 57);
   border-radius: 50px;
-  text-wrap: nowrap;
-  -webkit-text-wrap: nowrap;
-  min-width:14px;
+  white-space: nowrap;
+  min-width: 14px;
   padding: 3px;
   font-size: 10px;
   font-weight: 500;
@@ -130,7 +129,7 @@ span.hidden, i.hidden{
   width: 104px;
   justify-self: right;
   color: var(--base-color-);
-  padding: 0;
+  padding: 8px 0;
   /* font-weight: 600; */
 }
 .section-2{
