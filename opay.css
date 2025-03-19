@@ -2,31 +2,37 @@
   font-family: 'Inter';
   src: url(./Inter-VariableFont_slnt\,wght.ttf);
 }
+html{
+  font-size: 13px;
+}
 body{
   font-family: 'Inter';
   margin: 0;
+  --base-color-: #57D491;
 }
 article{
-  background: #f9f9ff;
-  border: 2px solid black;
+  background: #fafaff;
+  /* border: 2px solid black; */
   padding: 0 20px;
   width: 380px;
   height: 98vh;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   position: relative;
   margin: auto;
 }
 header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
-  gap: 30%;
+  gap: 20%;
 }
 img{
   width: 35px;
   height: 35px;
   border-radius: 50px ;
 }
+
 p{
   margin: 0;
 }
@@ -37,7 +43,7 @@ main{
 }
 nav{
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   display: flex;
   gap: 2px;
@@ -45,41 +51,56 @@ nav{
   width: 100%;
   justify-content: space-around;
   height: 40px;
-  border-top: 2px solid rgba(0, 0, 0, 0.242);
+  border-top: 2px solid rgba(0, 0, 0, 0.092);
   background-color: white;
   padding: 5px 0;
 }
 .lh-span-1{
   position: relative;
-  vertical-align: middle;
   margin-right: 5px;
-}
-.lh-span-2, .lh-span-2 small{
-  font-size: 1.5rem;
 }
 .lh-span-2 small{
   font-weight: 600;
 }
 .user-icon{
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  bottom: 15%;
+  right: 20%;
   color: gray;
+  font-size: 14px;
 }
 .right-header, .left-header{
   display: flex;
   flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 .right-header{
   justify-content: space-around;
 }
-.right-header i{
-  font-size: 30px;
+.right-header i, .section-3 div i{
+  font-size: 22px;
   color: gray;
+  position: relative;
+}
+:is(.right-header , .section-3 div ) i span{
+  position: absolute;
+  color: white;
+  background-color: rgb(255, 57, 57);
+  border-radius: 50px;
+  text-wrap: nowrap;
+  min-width:14px;
+  padding: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 50%;
 }
 .section-1{
   /* background: #1dcf9f; */
-  background: #57d491;
+  background: var(--base-color-);
   padding: 20px;
   border-radius: 20px;
   display: grid;
@@ -87,23 +108,28 @@ nav{
   /* display: flex; */
   /* flex-wrap: wrap; */
   color: white;
-  font-weight: 600;
-  font-size: 14px;
+  /* font-weight: 600; */
+  font-size: 13px;
   gap: 20px;
+}
+.section-1 span:not(.hidden) {
+  font-weight: 600;
 }
 span.hidden, i.hidden{
   display: none
 }
 .money{
-  font-size: 25px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .add-money{
   background: white;
   border: none;
   border-radius: 50px;
-  width: 120px;
-  color: #57d491;
-  padding: 8px 0;
+  width: 104px;
+  justify-self: right;
+  color: var(--base-color-);
+  padding: 0;
   /* font-weight: 600; */
 }
 .section-2{
@@ -124,7 +150,7 @@ span.hidden, i.hidden{
   text-align: center;
   border-radius: 16px;
   padding: 15px;
-  color: #57d491;
+  color: var(--base-color-);
 }
 .section-3{
   display: flex;
@@ -135,6 +161,7 @@ span.hidden, i.hidden{
   gap: 20px;
   align-items: center;
   justify-content: center;
+  font-size: 11px;
 }
 .section-3 div{
   width: 75px;
@@ -152,15 +179,30 @@ span.hidden, i.hidden{
 nav div {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+nav div i{
+  font-size: 15px;
+  color: var(--base-color-);
+}
+.section-4{
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  padding: 13px;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
   justify-content: center;
-
 }
-.circle{
-  background-color: #57d491;
-  color: white;
-  border-radius: 50%;
-  /* padding: 10px; */
-  font-weight: 500;
+.section-4 h2{
+  margin: 0;
+  font-weight: 600;
+  color: rgb(65, 65, 65);
+  font-size: 16px;
+}
+.section-4 div{
+  flex: 1;
 }
