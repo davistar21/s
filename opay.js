@@ -1,28 +1,28 @@
 const $ = (id) => document.getElementById(id)
 
-const money = $('money');
+const money = $('unhashed');
 const hashed = $('hashed');
 const openEye = $('open-eye');
 const closedEye = $('close-eye');
 const eyes = $('eyes');
 
 
-openEye.addEventListener('click', () => {
-  if (!openEye.classList.contains('hidden')) {
-    openEye.classList.add('hidden')
-    closedEye.classList.remove('hidden')
-    money.classList.add('hidden');
-    hashed.classList.remove('hidden')
-  }
-})
-closedEye.addEventListener('click', () => {
-  if (!closedEye.classList.contains('hidden')) {
-    closedEye.classList.add('hidden')
-    openEye.classList.remove('hidden')
-    money.classList.remove('hidden');
-    hashed.classList.add('hidden')
-  }
-})
+// openEye.addEventListener('click', () => {
+//   if (!openEye.classList.contains('hidden')) {
+//     openEye.classList.add('hidden')
+//     closedEye.classList.remove('hidden')
+//     money.classList.add('hidden');
+//     hashed.classList.remove('hidden')
+//   }
+// })
+// closedEye.addEventListener('click', () => {
+//   if (!closedEye.classList.contains('hidden')) {
+//     closedEye.classList.add('hidden')
+//     openEye.classList.remove('hidden')
+//     money.classList.remove('hidden');
+//     hashed.classList.add('hidden')
+//   }
+// })
 
 money.addEventListener('click', () => {
   money.innerHTML = `<input type="number" placeholder="input money here..." id="change-money" class="var-change" >`
@@ -51,6 +51,21 @@ money.addEventListener('click', () => {
 //     // console.log(closedEye, openEye)
 //   })
 // })
+
+
+
+eyes.querySelectorAll(".fa-solid").forEach(eye => {
+    eye.addEventListener("click", () => {
+        let openEye = eyes.querySelector(".fa-solid:not(.hidden)");
+        let closedEye = eyes.querySelector(".fa-solid.hidden");
+        let unhashed = document.querySelector(".mha:not(.hidden)");
+        let hashed = document.querySelector('.mha.hidden');
+        unhashed.classList.add("hidden");
+        hashed.classList.remove("hidden")
+        openEye.classList.add("hidden");
+        closedEye.classList.remove("hidden");
+    });
+});
 
 
 
