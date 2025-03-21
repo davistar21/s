@@ -8,7 +8,7 @@ html{
 body{
   font-family: 'Inter';
   margin: 0;
-  --base-color-: #57D491;
+  --base-color-: #58c77d;
 }
 article{
   background: #fafaff;
@@ -80,7 +80,7 @@ nav{
 }
 .right-header i, .section-3 div i{
   font-size: 22px;
-  color: gray;
+  color: hsl(0, 0%, 62%);
   position: relative;
 }
 :is(.right-header , .section-3 div ) i span{
@@ -114,7 +114,10 @@ nav{
   font-size: 13px;
   gap: 20px;
 }
-.section-1 span:not(.hidden) {
+.section-1 span i{
+  cursor: pointer;
+}
+.section-1 span {
   font-weight: 600;
 }
 span.hidden, i.hidden{
@@ -134,6 +137,9 @@ span.hidden, i.hidden{
   padding: 8px 0;
   /* font-weight: 600; */
 }
+.add-money:active{
+  opacity: 0.8;
+}
 .section-2{
   display: flex;
   background: white;
@@ -147,13 +153,18 @@ span.hidden, i.hidden{
   align-items: center;
   gap: 10px;
 }
-:is(.section-2 div, .section-3 div) i{
+:is(.section-2 div, .section-3 div) i, .section-2 object{
   background: rgba(232, 255, 239, 0.74);
   text-align: center;
   border-radius: 16px;
   min-width: 20px;
   padding: 15px;
   color: var(--base-color-);
+}
+.img-icon {
+  /* background-color: var(--base-color-); */
+  /* overflow: hidden; */
+  stroke: red;
 }
 .section-3{
   display: flex;
@@ -189,6 +200,9 @@ nav div {
 nav div i{
   font-size: 15px;
   color: var(--base-color-);
+}
+nav div object{
+  width: 15px;
 }
 .section-4{
   display: flex;

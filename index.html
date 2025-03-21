@@ -12,10 +12,10 @@
     <header>
       <div class="left-header">
         <span class="lh-span-1">
-          <img src="./OPay_idyQMzJv6x_0.jpeg" alt="">
+          <img src="./idyQMzJv6x_1742326133169.jpeg" alt="">
           <i class="fa-solid fa-user user-icon"></i>
         </span>
-        <span class="lh-span-2">Hi, <small>JOHN SMITH</small></span>
+        <span class="lh-span-2">Hi, <small id="username">JOHN SMITH</small></span>
       </div>
       <div class="right-header">
         <i class="fa-solid fa-headphones-simple"></i>
@@ -33,12 +33,15 @@
         <span>Home</span>
       </div>
       <div>
-        <i class="fa-regular fa-circle"></i>
+        <i class="fa-solid fa-box"></i>
         <span>Rewards</span>
       </div>
       <div>
+        <object data="./chart-simple-solid.svg" type="image/svg+xml"></object>
+        <!-- <img src="./chart-simple-solid.svg" class="img-icon" alt=""> -->
+        <!-- <i class="fa-solid fa-building-columns"></i> -->
         <!-- <i class="fa-solid fa-chart-simple"></i> -->
-        <i class="fa-regular fa-circle"></i>
+        <!-- <i class="fa-regular fa-circle"></i> -->
         <span>Finance</span>
       </div>
       <div>
@@ -53,15 +56,15 @@
     <main>
       <section class="section-1">
         <p>&lsaquo; Available Balance 
-          <span class="eyes">
-            <i class="fa-solid fa-eye"></i>
-            <i class="fa-solid fa-eye-low-vision hidden"></i>
+          <span class="eyes" id="eyes">
+            <i class="fa-solid fa-eye" id="open-eye"></i>
+            <i class="fa-solid fa-eye-low-vision hidden" id="close-eye"></i>
           </span>
         </p>
         <div style="text-align:right">Transaction History &rsaquo;</div>
         <div class="money">
-          <span>N12345.00 &rsaquo;</span>
-          <span class="hidden">**** &rsaquo;</span>
+          <span id="money">N12345.00 &rsaquo;</span>
+          <span id="hashed" class="hidden">**** &rsaquo; </span>
         </div>
         <button class="add-money">+ Add Money</button>
       </section>
@@ -71,8 +74,11 @@
           <span>To OPay</span>
         </div>
         <div>
-          <!-- <i class="fa-solid fa-building-columns"></i> -->
-          <i class="fa-solid fa-user"></i>
+          <object data="./building-columns-solid.svg" type="image/svg+xml"></object>
+          
+          <!-- <img src="./building-columns-solid.svg" alt="" class="img-icon"> -->
+        <!-- <i class="fa-solid fa-building-columns"></i> -->
+          <!-- <i class="fa-solid fa-user"></i> -->
           <span>To Bank</span>
         </div>
         <div>
